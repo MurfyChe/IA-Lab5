@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Students Catalog</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
     <div class="sidebar sidebar-left">
@@ -17,13 +18,26 @@
 
     <header>
         <h1>Students Catalog</h1>
-    </header>
+        
+        <div class="user-menu-wrap">
+            <div class="user-icon" id="userIcon">
+                <i class="fa-solid fa-circle-user"></i>
+            </div>
+
+            <div class="user-popup" id="userPopup">
+                <div class="popup-content">
+                    <p>Hello, User!</p>
+                    <button class="settings-btn">More Settings</button>
+                </div>
+            </div>
+        </div>
+        </header>
 
     <main>
         <div class="catalog">
             <div class="card">
                 <h3>Mortan Razvan</h3>
-                <p><strong>Expectations:</strong>  Tehnologii si Sisteme de Telecomunicatii</p>
+                <p><strong>Expectations:</strong> Tehnologii si Sisteme de Telecomunicatii</p>
                 <p><strong>Hobbies:</strong>Cybersecurity, pentesting, networking.</p>
                 <p><strong>Email:</strong> murfy@duck.com</p>
                 <a href="date_M.Razvan.html">Open profile</a>
@@ -64,7 +78,29 @@
     </main>
 
     <footer>
-        <p>© 2025 Students Catalog | Created by M. Razvan</p>
+        <p>Students Catalog | Created by Mortan Razvan</p>
     </footer>
+
+    <script>
+        const userIcon = document.getElementById('userIcon');
+        const userPopup = document.getElementById('userPopup');
+
+        userIcon.addEventListener('click', (e) => {
+            e.stopPropagation();
+            userPopup.classList.toggle('active');
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!userPopup.contains(e.target) && e.target !== userIcon) {
+                userPopup.classList.remove('active');
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && userPopup.classList.contains('active')) {
+                userPopup.classList.remove('active');
+            }
+        });
+    </script>
 </body>
 </html>
