@@ -71,3 +71,60 @@ footer {
     color: #777;
 }
 
+/* Styles for butonul alta viata lab 7 */
+
+#altaViataBtn {
+    display: block;
+    margin: 0 auto 20px auto;
+    padding: 10px 20px;
+    font-size: 1em;
+    font-weight: bold;
+    color: #fff;
+    background-color: #bd20bd;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#altaViataBtn:hover {
+    background-color: #a01aa0;
+}
+
+
+
+/* Stiluri pentru js script lab 7 */
+body.alta-viata {
+    background-color: #262c49;
+}
+
+body.alta-viata main {
+    background-color: #363e66;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+body.alta-viata header h1,
+body.alta-viata section h2 {
+    color: #ffffff;
+}
+
+body.alta-viata section h2 {
+    border-left-color: #cecece;
+}
+
+body.alta-viata header {
+    border-bottom-color: #cecece;
+}
+
+body.alta-viata a {
+    color: #55d6c2;
+    font-weight: bold;
+}
+
+body.alta-viata a:hover {
+    color: #8af0de;
+}
+
+body.alta-viata footer {
+    color: #aaa;
+}

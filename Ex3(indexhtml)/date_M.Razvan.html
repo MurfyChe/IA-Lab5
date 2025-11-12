@@ -11,13 +11,20 @@
         <h1>Date_M.Razvan</h1>
     </header>
     <main>
+        <button id="altaViataBtn">Alta viata</button>
+
         <section>
-            <p>Nume: Mortan</p>
-            <p>Prenume: Razvan</p>
-            <p>Ca si asteptari legate de educatie as dori sa aprofundez Tehnologii si Sisteme de Telecomunicatii 
+            <p id="nume">Nume: Mortan</p>
+            <p id="prenume">Prenume: Razvan</p>
+            <p id="anNastere" 
+               onmouseover="calculeazaVarsta(2006)" 
+               onmouseout="reseteazaText(2006)">
+               Anul nasterii: 2006
+            </p>
+            <p id="asteptari">Ca si asteptari legate de educatie as dori sa aprofundez Tehnologii si Sisteme de Telecomunicatii 
                 (mai precis Radiotelecomunicatii, Retele de calculatoare si Sisteme cu microprocesoare).
             </p>
-            <p>Niste hobby-uri representative sunt securitatea cibernetica(hardware/software), pentesting si retelistica.</p>
+            <p id="hobby-uri">Niste hobby-uri representative sunt securitatea cibernetica(hardware/software), pentesting si retelistica.</p>
              <a href="https://github.com/MurfyChe/IA-Lab5">GitHub Repo</a>
         </section>
         <section>
@@ -29,5 +36,7 @@
     <footer>
         <p>Students Catalog | Created by Mortan Razvan</p>
     </footer>
+
+    <script src="app.js"></script>
 </body>
 </html>
